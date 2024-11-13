@@ -23,7 +23,7 @@ def main():
     print("Rock beats Scissors, Scissors beats Paper, Paper beats Rock")
     print("------------------------------------------------------------")
     
-    #Game Preperation
+    #Game Preparation
     import random
     list1=["rock", "paper", "scissors"]
     
@@ -43,73 +43,63 @@ def main():
             break
         
         
-        elif (you == "rock" and enemy == "rock"):
+        elif (you == "rock"):
             print(" ")
-            enemy = random.choice(["rock", "paper", "scissors"])
-            print("..shoot!")
-            print("You two tied! No point.")
-            z=z+1
-            print("(YOU) = " + str(x) + " , (ENEMY) = " + str(y))
+            if (enemy == "rock"):
+                print("..shoot!")
+                print("ENEMY chose " + you + " as well! Tie :O .")
+                z=z+1
+                
+            if (enemy == "paper"):
+                print("..shoot!")
+                print("ENEMY chose " + enemy + ". Point to ENEMY :( .")
+                y=y+1
+                
+            if (enemy == "scissors"):
+                print("..shoot!")
+                print("ENEMY chose " + enemy + ". Point to YOU :) .")
+                x=x+1
             
-        elif (you == "rock" and enemy == "paper"):
-            print(" ")
-            print("..shoot!")
-            print("You lost :( Point for enemy!")
-            y=y+1
-            print("(YOU) = " + str(x) + " , (ENEMY) = " + str(y))
-
-        elif (you == "rock" and enemy == "scissors"):
-            print(" ")
-            print("..shoot!")
-            print("You won :) Point for you!")
-            x=x+1
-            print("(YOU) = " + str(x) + " , (ENEMY) = " + str(y))
+            print(" YOU = " + str(x) + ", ENEMY = " + str(y) + ", TIES = " + str(z) + ".")
             
             
-        elif (you == "paper" and enemy == "rock"):
-            print(" ")
-            print("..shoot!")
-            print("You won :) Point for you!")
-            x=x+1
-            print("(YOU) = " + str(x) + " , (ENEMY) = " + str(y))
-        
-        elif (you == "paper" and enemy == "paper"):
-            print(" ")
-            print("..shoot!")
-            print("You two tied! No point.")
-            z=z+1
-            print("(YOU) = " + str(x) + " , (ENEMY) = " + str(y))
+        elif (you == "paper"):
+            if (enemy == "paper"):
+                print("..shoot!")
+                print("ENEMY chose " + you + " as well! Tie :O .")
+                z=z+1
+                
+            if (enemy == "scissors"):
+                print("..shoot!")
+                print("ENEMY chose " + enemy + ". Point to ENEMY :( .")
+                y=y+1
+                
+            if (enemy == "rock"):
+                print("..shoot!")
+                print("ENEMY chose " + enemy + ". Point to YOU :) .")
+                x=x+1
             
-        elif (you == "paper" and enemy == "scissors"):
-            print(" ")
-            print("..shoot!")
-            print("You lost :( Point for enemy.")
-            y=y+1
-            print("(YOU) = " + str(x) + " , (ENEMY) = " + str(y))
-
-
+            print(" YOU = " + str(x) + ", ENEMY = " + str(y) + ", TIES = " + str(z) + ".")
             
-        elif (you == "scissors" and enemy == "rock"):
-            print(" ")
-            print("..shoot!")
-            print("You lost :( Point for enemy.")
-            y=y+1
-            print("(YOU) = " + str(x) + " , (ENEMY) = " + str(y))
             
-        elif (you == "scissors" and enemy == "paper"):
-            print(" ")
-            print("..shoot!")
-            print("You won :) Point for you!")
-            x=x+1
-            print("(YOU) = " + str(x) + " , (ENEMY) = " + str(y))
+        elif (you == "scissors"):
+            if (enemy == "scissors"):
+                print("..shoot!")
+                print("ENEMY chose " + you + " as well! Tie :O .")
+                z=z+1
+                
+            if (enemy == "rock"):
+                print("..shoot!")
+                print("ENEMY chose " + enemy + ". Point to ENEMY :( .")
+                y=y+1
+                
+            if (enemy == "paper"):
+                print("..shoot!")
+                print("ENEMY chose " + enemy + ". Point to YOU :) .")
+                x=x+1
             
-        elif (you == "scissors" and enemy == "scissors"):
-            print(" ")
-            print("..shoot!")
-            print("You two tied! No point.")
-            z=z+1
-            print("(YOU) = " + str(x) + " , (ENEMY) = " + str(y))
-            
+            print(" YOU = " + str(x) + ", ENEMY = " + str(y) + ", TIES = " + str(z) + ".")
+    
         
         else:
             print("Huh?")
