@@ -1,0 +1,48 @@
+class InfoCollection:
+
+    def __init__(info):
+        #Contact
+        info.name = " "
+        info.phoneNumber = " "
+        #Personal
+        info.age = " "
+        info.gender = " "
+
+
+    def set_Personal(info):
+        self.gender = ""
+        self.age = ""
+
+    def ageChecker(info):
+        if (int(info.age) < 18):
+            print("You are underage.")
+
+        else:
+            print("You are an adult.")
+
+def main():
+    inf = InfoCollection()
+
+    inf.name = input("What is your name? ")
+    print(f"Hello there {inf.name}!!")
+
+    inf.phoneNumber = input("What is your phone number? ")
+    print(f"Your phone number is {inf.phoneNumber}.")
+    print(" ")
+
+    inf.gender = input("What gender do you consider yourself as? ")
+    print(f"You consider yourself to be a {inf.gender}.")
+
+    inf.age = input("How old are you? ")
+    print(f"You are {inf.age} years old.")
+    print(" ")
+    inf.ageChecker()
+
+
+    print(" ")
+    print(f"Name: {inf.name}")
+    print(f"Phone Number: {inf.phoneNumber}")
+    print(f"Gender: {inf.gender}")
+    print(f"Age: {inf.age}")
+
+main()
