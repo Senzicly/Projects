@@ -1,5 +1,4 @@
-#Luis Dacosta
-#12/8/25
+#12/9/25
 #A program that can display a leaderboard, check information in the leaderboard
 #It lets you pick a number (position) on the leaderboard and display all the names
 
@@ -88,4 +87,5 @@ def main():
     
 
 main()
+
 
